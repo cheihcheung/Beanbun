@@ -32,7 +32,7 @@ $beanbun->downloadPage = function ($beanbun) {
 
     $client->send($request, $response);
 
-    $worker_id = $beanbun->daemonize ? $this->id : '';
+    $worker_id = $beanbun->daemonize ? $beanbun->id : '';
     $beanbun->log("Beanbun worker {$worker_id} download {$beanbun->url} success.");
 };
 
